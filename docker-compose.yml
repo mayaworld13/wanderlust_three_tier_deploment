@@ -10,7 +10,7 @@ services:
 
   backend:
     container_name: backend
-    build: ./backend
+    image: mayaworld13/wanderlust:backend
     env_file:
       - ./backend/.env.sample
     ports:
@@ -20,7 +20,7 @@ services:
 
   frontend:
     container_name: frontend
-    build: ./frontend
+    image: mayaworld13/wanderlust:frontend
     env_file:
       - ./backend/.env.sample
     ports:
