@@ -99,8 +99,96 @@ _I'd love for you to make the most of this project - it's all about learning, he
 4. **Launch the Development Server**
 
    ```bash
-   npm run dev
+   npm run dev --  --host
    ```
+
+# WondarLust website  with React, Nodejs ,Mongodb and  Docker Setup
+
+## Prerequisites
+
+Before you begin, make sure you have the following installed:
+
+- Docker
+- Git (optional, for cloning the repository)
+
+## Setup
+
+1. Clone this repository (if you haven't already):
+
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd your-repo-name
+   ```
+
+For frontend
+   ```bash
+   cd your-repo-name/frontend
+   ```
+1. Open the `.env.sample` file
+   ```bash
+   VITE_API_PATH="http://YOURIP:5000"
+   ```
+2. create a docker image from Dockerfile for frontend
+   ```bash
+   docker build -t frontend .
+   ```
+
+   - Now, make sure that you have created a network using following command
+   ```bash
+   docker network create threetier
+   ```
+
+For Backend
+   ```bash
+     cd your-repo-name/backend
+   ```
+1.  Open the `.env.sample` file
+   ```bash
+   MONGODB_URI="mongodb://YOURIP/wanderlust"
+   ```
+2. create a docker image from Dockerfile for frontend
+   ```bash
+   docker build -t backend .
+   ```
+
+ 
+- Attach all the three containers in the same network, so that they can communicate with each other
+  
+i) Mongodb container 
+```bash
+ docker run -d \
+    --name mongodb \
+    --network=threetier \
+    -p 27017:27017 \
+    mongo:latest
+```
+ii) Backend container
+ ```bash
+   docker run -d \
+    --name backend \
+    --network=threetier \
+    -p 5000:5000 \
+    backend:latest
+
+ ```
+
+iii) Frontend container
+ ```bash
+   docker run -d \
+    --name frontend \
+    --network=threetier \
+    -p 5173:5173 \
+    backend:latest
+
+ ```
+
+then make sure to give security bound rules in AWS as base image is ubuntu
+
 
 ## 🌟 Ready to Contribute?
 
