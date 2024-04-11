@@ -7,7 +7,7 @@ WanderLust is a simple MERN travel blog website ✈ This project is aimed to hel
 ## [Figma Design File](https://www.figma.com/file/zqNcWGGKBo5Q2TwwVgR6G5/WanderLust--A-Travel-Blog-App?type=design&node-id=0%3A1&mode=design&t=c4oCG8N1Fjf7pxTt-1)
 ## [Discord Channel](https://discord.gg/FEKasAdCrG)
 
-##**Tutorial for Dockerization**
+## **Tutorial for Dockerization**
 
 https://github.com/mayaworld13/wanderlust_three_tier_deploment/assets/127987256/00d2f805-c760-484a-807b-d6f0966d06ee
 
