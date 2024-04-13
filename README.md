@@ -187,6 +187,16 @@ iii) Frontend container
 
  ```
 
+then open the `.env.sample` file if backend
+   ```bash
+   MONGODB_URI="mongodb://mongodb-containername/wanderlust"
+   ```
+then import sample data to featured section
+ ```bash
+    docker exec containername or id -it  mongoimport --db wanderlust --collection posts --file ./data/sample_posts.json --jsonArray
+   ```
+
+
 then make sure to give security bound rules in AWS as base image is ubuntu
 
 
