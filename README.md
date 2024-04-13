@@ -187,7 +187,7 @@ iii) Frontend container
 
  ```
 
-then open the `.env.sample` file if backend
+then open the `.env.sample` file of backend
    ```bash
    MONGODB_URI="mongodb://mongodb-containername/wanderlust"
    ```
