@@ -197,14 +197,7 @@ then import sample data to featured section
    ```
 
 
-then make sure to give security bound rules in AWS as base image is ubuntu
 
-
-## 🌟 Ready to Contribute?
-
-Kindly go through [CONTRIBUTING.md](https://github.com/krishnaacharyaa/wanderlust/blob/main/.github/CONTRIBUTING.md) to understand everything from setup to contributing guidelines.
-
-## 💖 Show Your Support
 
 If you find this project interesting and inspiring, please consider showing your support by starring it on GitHub! Your star goes a long way in helping me reach more developers and encourages me to keep enhancing the project.
 
